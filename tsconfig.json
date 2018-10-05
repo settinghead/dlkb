@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noImplicitAny": false,
+    "sourceMap": true,
+    "jsx": "react",
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "declaration": true,
+    "strictNullChecks": true,
+    "target": "es5",
+    "lib": [
+      "es2015",
+      "dom"
+    ],
+    "types": [
+      "node"
+    ],
+    "outDir": "./dist",
+    "noUnusedLocals": false,
+    "noImplicitReturns": false,
+    "noImplicitThis": false,
+    "alwaysStrict": false,
+    "noUnusedParameters": false,
+    "pretty": true,
+    "noFallthroughCasesInSwitch": false,
+    "allowUnreachableCode": false,
+    "experimentalDecorators": true
+  },
+  "include": [
+    "src/"
+  ],
+  "exclude": [
+    "node_modules/",
+    "dist/"
+  ]
+}
