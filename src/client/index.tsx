@@ -3,21 +3,37 @@ import './index.scss'
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import papers from '../data/papers';
+import { papers, knodes } from '../data/';
+import { KNodeViewer } from './knode'
 
 init()
 
 async function init() {
   const element = (
-    <div class="container-fluid">
+    <div className="container-fluid">
       <h1>xkb</h1>
       <hr />
-      <h2>Papers</h2>
-      <ul>
-        {papers.map(p => (
-          <li>{p.title}</li>
-        ))}
-      </ul>
+      <div className="row">
+        <div className="col-md">
+          <h2>KNodes</h2>
+          <ul className="list-group">
+            {knodes.map((n, i) => (
+              <li className="list-group-item"
+                key={i}>
+                <KNodeViewer node={n} />
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="col-md">
+          <h2>Papers</h2>
+          <ul>
+            {papers.map(p => (
+              <li key={p.uniqueRef}>{p.title}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
     </div>
   );
   ReactDOM.render(element, document.getElementById('app-root'));

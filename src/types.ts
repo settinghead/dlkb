@@ -6,4 +6,7 @@ export interface Paper {
 
 export interface KNode {
   manualName?: string;
+  items: Math[]
 }
+
+export type Math = string
