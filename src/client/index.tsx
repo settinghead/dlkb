@@ -11,11 +11,11 @@ init()
 async function init() {
   const element = (
     <div className="container-fluid">
-      <h1>xkb</h1>
+      <h1>NWW</h1>
       <hr />
       <div className="row">
         <div className="col-md">
-          <h2>KNodes</h2>
+          <h2>Knowledge Points</h2>
           <ul className="list-group">
             {knodes.map((n, i) => (
               <li className="list-group-item"

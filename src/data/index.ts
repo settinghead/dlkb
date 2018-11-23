@@ -26,5 +26,20 @@ export const knodes: KNode[] = [
     items: [
       "\\hat{f}(\\xi) = \\int_{-\\infty}^{\\infty} f(x)\\ e^{-2\\pi i x \\xi}\\,dx,"
     ]
+  }, {
+    manualName: 'Laplacian matrix',
+    items: [
+      `L^\\text{rw} := D^{-1}L = I - D^{-1}A`,
+      `L^\\text{rw}_{i,j} := \\begin{cases}
+        1 & \\mbox{if } i = j \\mbox{ and } \\deg(v_i) \\neq 0\\\\
+        -\\frac{1}{\\deg(v_i)} & \\mbox{if } i \\neq j \\mbox{ and } v_i \\mbox{ is adjacent to } v_j \\\\
+        0 & \\mbox{otherwise}.
+      \\end{cases}`,
+      `\\begin{cases}
+        Q_{i,j} < 0 & \\mbox{if } i \\neq j \\mbox{ and } v_i \\mbox{ is adjacent to } v_j\\\\
+        Q_{i,j} = 0 & \\mbox{if } i \\neq j \\mbox{ and } v_i \\mbox{ is not adjacent to } v_j \\\\
+      \\mbox{any number} & \\mbox{otherwise}.
+      \\end{cases}`
+    ]
   }
 ];
